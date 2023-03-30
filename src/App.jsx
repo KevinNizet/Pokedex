@@ -33,7 +33,7 @@ function App() {
       },
     ];
 
-     /*  code du bouton   */
+     /*  code du bouton avec utilisation du state */
      const [currentPokemonIndex, setCurrentPokemonIndex] = useState (0);
      
       const handlePreviousClick = () => {
@@ -46,10 +46,13 @@ function App() {
 
   return (
   
-   /*  ajout de la condition "affichage du bouton précédent seulement s'il y a un pokémon précédent" et "affichage du bouton suivant, seulement s'il y a un pokémon suivant" */
+   /*  ajout de la condition "affichage du bouton précédent seulement s'il y a un pokémon précédent" et "affichage du bouton suivant, seulement s'il y a un pokémon suivant */
+
     <div>
       <PokemonCard pokemon = {pokemonList[currentPokemonIndex]} />
+
       {currentPokemonIndex > 0 ? <button onClick={handlePreviousClick}> Précédent </button> : undefined}
+      
       {currentPokemonIndex < pokemonList.length -1 ? <button onClick={handleNextClick}> Suivant </button> : undefined}
     </div>
   );
