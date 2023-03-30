@@ -2,7 +2,9 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+
 import PokemonCard from "./components/PokemonCard"
+/* import NavBar from "./components/NavBar" */
 
 
 function App() {
@@ -47,14 +49,16 @@ function App() {
   return (
   
    /*  ajout de la condition "affichage du bouton précédent seulement s'il y a un pokémon précédent" et "affichage du bouton suivant, seulement s'il y a un pokémon suivant */
-
-    <div>
+    <figure>  
+    <div className='PokemonCard'>
       <PokemonCard pokemon = {pokemonList[currentPokemonIndex]} />
-
-      {currentPokemonIndex > 0 ? <button onClick={handlePreviousClick}> Précédent </button> : undefined}
-      
-      {currentPokemonIndex < pokemonList.length -1 ? <button onClick={handleNextClick}> Suivant </button> : undefined}
     </div>
+    <div className='buttons-div'>
+        {currentPokemonIndex > 0 ? <button className="PreviousButton" onClick={handlePreviousClick}> Précédent </button> : undefined}
+
+        {currentPokemonIndex < pokemonList.length -1 ? <button className="NextButton"onClick={handleNextClick}> Suivant </button> : undefined}
+    </div>
+    </figure>
   );
 }
 
