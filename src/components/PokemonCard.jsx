@@ -5,6 +5,9 @@ function PokemonCard({pokemon}) {
 
   return (
     <> 
+
+    {/* condition ajoutant "???" si le pokémon n'a pas de src */}
+    
     <figure>
       {pokemon.imgSrc === undefined ? <p>???</p> : <img src={pokemon.imgSrc} alt={pokemon.name}/>}
     </figure>
@@ -17,7 +20,6 @@ function PokemonCard({pokemon}) {
 export default PokemonCard;
   
 /* ajout des propTypes */
-
 PokemonCard.propTypes = {
   pokemon: PropTypes.shape({
     name: PropTypes.string.isRequired,
