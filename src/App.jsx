@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 import PokemonCard from "./components/PokemonCard"
-/* import NavBar from "./components/NavBar" */
+import NavBar from "./components/NavBar"
 
 
 function App() {
@@ -54,9 +54,9 @@ function App() {
       <PokemonCard pokemon = {pokemonList[currentPokemonIndex]} />
     </div>
     <div className='buttons-div'>
-        {currentPokemonIndex > 0 ? <button className="PreviousButton" onClick={handlePreviousClick}> Précédent </button> : undefined}
-
-        {currentPokemonIndex < pokemonList.length -1 ? <button className="NextButton"onClick={handleNextClick}> Suivant </button> : undefined}
+        
+        <NavBar previous={handlePreviousClick} next={handleNextClick} index={currentPokemonIndex} pokemonList={pokemonList}/>
+       
     </div>
     </figure>
   );
