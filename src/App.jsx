@@ -9,19 +9,48 @@ function App() {
 
   const pokemonList = [
     {
-      name: "Bulbizarre",
-      imgSrc:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
-    },
-    {
-      name: "Mew",
-    },
-  ];
+        name: "bulbasaur",
+        imgSrc:
+          "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+      },
+      {
+        name: "charmander",
+        imgSrc:
+          "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
+      },
+      {
+        name: "squirtle",
+        imgSrc:
+          "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
+      },
+      {
+        name: "pikachu",
+        imgSrc:
+          "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+      },
+      {
+        name: "mew",
+      },
+    ];
+
+     /*  code du bouton   */
+     const [currentPokemonIndex, setCurrentPokemonIndex] = useState (0);
+     
+      const handlePreviousClick = () => {
+        setCurrentPokemonIndex(currentPokemonIndex - 1);
+      }
+
+      const handleNextClick = () => {
+        setCurrentPokemonIndex(currentPokemonIndex + 1);
+      }    
 
   return (
   
+   /*  ajout de la condition "affichage du bouton précédent seulement s'il y a un pokémon précédent" et "affichage du bouton suivant, seulement s'il y a un pokémon suivant" */
     <div>
-      <PokemonCard pokemon = {pokemonList[0]} />
+      <PokemonCard pokemon = {pokemonList[currentPokemonIndex]} />
+      {currentPokemonIndex > 0 ? <button onClick={handlePreviousClick}> Précédent </button> : undefined}
+      {currentPokemonIndex < pokemonList.length -1 ? <button onClick={handleNextClick}> Suivant </button> : undefined}
     </div>
   );
 }
