@@ -10,13 +10,6 @@ import NavBar from "./components/NavBar"
 
 function App() {
 
-  /* useEffet pour l'alerte automatique à l'ouverture de l'app */
-  useEffect(
-    () => {
-      alert("Bienvenue sur ton Pokédex dresseur ! :)")
-    }, 
-    []
-  ); 
   
 /* tableau des pokémons */
   const pokemonList = [
@@ -56,14 +49,26 @@ function App() {
         setCurrentPokemonIndex(currentPokemonIndex + 1);
       }    
 
+        /* useEffet pour l'alerte automatique à l'ouverture de l'app */
+   useEffect(
+    () => {
+      alert("Bienvenue sur ton Pokédex dresseur ! 😊");
+    }, 
+    []
+  ); 
+
      /*  alerte du message seulement quand Pikachu apparaît */
       const currentPokemon = pokemonList[currentPokemonIndex];
 
         if (currentPokemon.name === "pikachu") {
           setTimeout(() => {
-            alert("Pika pika pikachuuuuuu !")
+            alert("Pika pika pikachuuuuuu !");
           }, 100);
         }
+
+        TODO: /* ajout d'une const pour gérer le state de l'alerte affichée ou non (initialisée à false*/
+
+      
         
 
   return (
