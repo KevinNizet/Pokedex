@@ -1,6 +1,7 @@
 
 import PropTypes from "prop-types";
 
+
 function PokemonCard({pokemon}) {
 
   return (
@@ -8,11 +9,11 @@ function PokemonCard({pokemon}) {
 
     {/* condition ajoutant "???" si le pokémon n'a pas de src */}
     
-    <figure>
-      {pokemon.imgSrc === undefined ? <p>???</p> : <img src={pokemon.imgSrc} alt={pokemon.name}/>}
+    <figure className="card">
+      {pokemon.imgSrc === undefined ? <p>???</p> : <img src={pokemon.imgSrc} alt={pokemon.name} className="card-img"/>}
     </figure>
 
-    <p> Hello, je suis {pokemon.name} ! </p>
+    <p> Hello, je m'appelle {pokemon.name} ! </p>
     </>
   )
   }
