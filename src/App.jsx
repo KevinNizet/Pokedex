@@ -14,27 +14,27 @@ function App() {
 /* tableau des pokémons */
   const pokemonList = [
     {
-        name: "bulbasaur",
+        name: "Bulbizarre",
         imgSrc:
           "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
       },
       {
-        name: "charmander",
+        name: "Salaméche",
         imgSrc:
           "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
       },
       {
-        name: "squirtle",
+        name: "Carapuce",
         imgSrc:
           "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
       },
       {
-        name: "pikachu",
+        name: "Pikachu",
         imgSrc:
           "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
       },
       {
-        name: "mew",
+        name: "Mew",
       },
     ];
 
@@ -60,9 +60,9 @@ function App() {
      /*  alerte du message seulement quand Pikachu apparaît */
       const currentPokemon = pokemonList[currentPokemonIndex];
 
-        if (currentPokemon.name === "pikachu") {
+        if (currentPokemon.name === "Pikachu") {
           setTimeout(() => {
-            alert("Pika pika pikachuuuuuu !");
+            alert("Pika pika pikachuuuuuu ⚡️ !");
           }, 100);
         }
 
@@ -75,13 +75,13 @@ function App() {
   
    /* Ajout d'un fragment, appel du composant PokemonCard et du composant NavBar */
     <> 
-    <figure>  
+    <figure className='CardDiv'>  
     <div className='PokemonCard'>
       <PokemonCard pokemon = {pokemonList[currentPokemonIndex]} />
     </div>
     <div className='buttons-div'>
         
-        <NavBar previous={handlePreviousClick} next={handleNextClick} index={currentPokemonIndex} pokemonList={pokemonList}/>
+        <NavBar previous={handlePreviousClick} next={handleNextClick} index={currentPokemonIndex} setIndex={setCurrentPokemonIndex} pokemonList={pokemonList}/>
        
     </div>
     </figure>
