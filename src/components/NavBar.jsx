@@ -6,7 +6,7 @@
     }
 
     return <nav>
-              {index > 0 && <button className="PreviousButton" onClick={previous}> Précédent </button>}
+              {index > 0 && <button className="PreviousButton" onClick={previous} > Précédent </button>}
               {index < pokemonList.length - 1 && <button className="NextButton" onClick={next}> Suivant </button>}
               
               <div className="PokemonButtonDiv">

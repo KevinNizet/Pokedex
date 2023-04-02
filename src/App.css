@@ -1,21 +1,13 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  margin-bottom: -18px;
   text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  background-color: #fbf8f8;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: background-color 0.8s ease-in-out;
+  
 }
 
 /* style CSS des cartes pokémon */
@@ -27,14 +19,32 @@
 .card {
   width: 200px;
   padding: 1rem;
-  background-color: lightgreen;
+  background-color: rgba(178, 180, 180, 0.455);
   border-radius: 5px;
   box-shadow: 0px 0px 5px gray;
-  color: white;
+ 
   font-size: 1.6rem;
   text-align: center;
   text-shadow: 0px 0px 5px gray;
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  
+  
+}
+
+.card-bulbizarre {
+  background-color: #78c850;
+}
+.card-salameche {
+  background-color: #e99458;
+}
+.card-carapuce {
+  background-color: #7198f3;
+}
+.card-pikachu {
+  background-color: #fcda55;
+}
+.card-mew {
+  background-color: #d0a4ee;
 }
 
 .card-img {
@@ -53,7 +63,8 @@
 }
 .PreviousButton,
 .NextButton {
-  background-color: rgb(214, 214, 214);
+  background-color: rgba(0, 0, 0, 0.827);
+  color: white;
   border-radius: 15px;
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
   margin: 10px;
@@ -61,30 +72,19 @@
 .PokemonButton {
   border-radius: 15px;
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
-  margin: 10px;
-  background-color: rgb(166, 209, 243);
+  margin: 20px;
+  background-color:rgba(64, 91, 91, 0.918);
+  color: white;
 }
-/* fin du code relatif au CSS des cartes */
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.PokemonButton:hover {
+  filter: drop-shadow(0 0 1em #fdfefeaa);
+  transition: filter 0.4s ease-in-out;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.goPokemon {
+  font-size: large;
+  font-weight: 400;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
-.card {
-  padding: 1em;
-}
 
-.read-the-docs {
-  color: #888;
-}
+
