@@ -60,7 +60,7 @@ function App() {
         if (currentPokemon.name === "Pikachu") {
           setTimeout(() => {
             alert("Pika pika pikachuuuuuu ⚡️ !");
-          }, 100);
+          }, 700);
         }
 
       /* changement de la couleur de fond de la carte en fonction du pokémon affiché */

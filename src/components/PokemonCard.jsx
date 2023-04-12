@@ -13,7 +13,8 @@ function PokemonCard({pokemon}) {
       {pokemon.imgSrc === undefined ? <p>???</p> : <img src={pokemon.imgSrc} alt={pokemon.name} className="card-img"/>}
     </figure>
 
-    <p className="goPokemon"> Go {pokemon.name} ! </p>
+    <p className="goPokemon"> 
+    Go {pokemon.name} ! </p>
     </>
   )
   }

@@ -31,7 +31,7 @@
   
 }
 
-.card-bulbizarre {
+/* .card-bulbizarre {
   background-color: #78c850;
 }
 .card-salameche {
@@ -45,7 +45,7 @@
 }
 .card-mew {
   background-color: #d0a4ee;
-}
+} */
 
 .card-img {
   width: 100%;
@@ -84,6 +84,12 @@
   font-size: large;
   font-weight: 400;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+.Title {
+  font-size: 200px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+  background: none;
 }
 
 
